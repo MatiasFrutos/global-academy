@@ -4,46 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Populares Ahora - El Rincón del Terror</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta8PUbAau2oNsWJYQBFUMjY1h/4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <style>
-        
         table.galeria {
-            width: 80%;
+            width: 95%;
+            max-width: 800px;
             margin: 20px auto;
             border-collapse: collapse;
+            background-color: #222;
+            border: 1px solid #444;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
         table.galeria td {
-            border: 1px solid #555;
-            padding: 10px;
+            border: 1px solid #333;
+            padding: 15px;
             text-align: center;
             vertical-align: top;
         }
         table.galeria img {
-            max-width: 200px; 
+            max-width: 180px;
             height: auto;
             display: block;
             margin: 0 auto 10px auto;
+            border: 2px solid #E50914;
+            box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
         }
         table.galeria p {
             font-weight: bold;
-            color: #E50914; 
+            color: #E50914;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            table.galeria, table.galeria tbody, table.galeria tr, table.galeria td {
+                display: block;
+                width: 100%;
+            }
+            table.galeria tr {
+                margin-bottom: 20px;
+                border: 1px solid #444;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            table.galeria td {
+                border: none;
+                border-bottom: 1px solid #333;
+                padding: 15px 10px;
+            }
+            table.galeria td:last-child {
+                border-bottom: none;
+            }
+        }
+        @media (max-width: 480px) {
+            table.galeria img {
+                max-width: 150px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>El Rincón del Terror</h1>
-        <p>Tu sitio para explorar el escalofriante mundo del cine de horror.</p>
-    </header>
+    <header class="main-header">
+        <div class="top-bar-terror">
+            <div class="contact-social">
+                <a href="contacto.html"><i class="fa-solid fa-envelope"></i> Contáctanos</a>
+                <a href="login.html"><i class="fa-solid fa-user"></i> Iniciar sesión</a>
+                <a href="registro.html">Crear cuenta</a>
+            </div>
+        </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="populares.html">Populares Ahora</a></li>
-            <li><a href="clasicos.html">Clásicos del Terror</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+        <div class="middle-bar-terror">
+            <div class="logo-terror">
+                <img src="img/logo.png" alt="Logo El Rincón del Terror">
+            </div>
+            <div class="search-box-terror">
+                <input type="text" placeholder="Busca tu pesadilla..." class="search-input">
+            </div>
+            <div class="cart">
+                <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> (<span id="cart-item-count">0</span>)</a>
+            </div>
+        </div>
+
+        <nav class="nav-bar-terror">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="populares.html">Populares Ahora</a></li>
+                <li><a href="clasicos.html">Clásicos del Terror</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="promo-banner-terror">
+            <i class="fa-solid fa-skull"></i>
+            <span>¡Nuevos horrores cada semana! No apto para cardíacos.</span>
+            <i class="fa-solid fa-skull"></i>
+        </div>
+    </header>
 
     <main>
         <section id="populares">
@@ -57,7 +115,9 @@
                 <p>Basada en los casos paranormales de Ed y Lorraine Warren, una película que te mantendrá al borde del asiento.</p>
             </article>
 
-            <hr> <h3>Galería del Horror Popular</h3>
+            <hr style="border-color: #E50914; margin: 30px auto; width: 50%;">
+
+            <h3>Galería del Horror Popular</h3>
             <p>Algunas escenas y pósters de películas que están dando que hablar:</p>
 
             <table class="galeria">
@@ -90,7 +150,6 @@
                     </td>
                 </tr>
             </table>
-            <p style="text-align:center; font-size:0.9em; color:#777;">
         </section>
     </main>
 
