@@ -3,64 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Populares Ahora - El Rincón del Terror</title>
+    <title>Populares - Tienda Online</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta8PUbAau2oNsWJYQBFUMjY1h/4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <style>
-        table.galeria {
-            width: 95%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background-color: #222;
-            border: 1px solid #444;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
         }
-        table.galeria td {
-            border: 1px solid #333;
-            padding: 15px;
+        .galeria-item {
             text-align: center;
-            vertical-align: top;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
         }
-        table.galeria img {
-            max-width: 180px;
+        .galeria-item img {
+            max-width: 100%;
             height: auto;
-            display: block;
-            margin: 0 auto 10px auto;
-            border: 2px solid #E50914;
-            box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
+            border-radius: 5px;
+            border: 2px solid #007BFF;
+            margin-bottom: 10px;
         }
-        table.galeria p {
+        .galeria-item p {
             font-weight: bold;
-            color: #E50914;
-            margin-top: 10px;
-            font-size: 1.1em;
-        }
-
-        @media (max-width: 768px) {
-            table.galeria, table.galeria tbody, table.galeria tr, table.galeria td {
-                display: block;
-                width: 100%;
-            }
-            table.galeria tr {
-                margin-bottom: 20px;
-                border: 1px solid #444;
-                border-radius: 8px;
-                overflow: hidden;
-            }
-            table.galeria td {
-                border: none;
-                border-bottom: 1px solid #333;
-                padding: 15px 10px;
-            }
-            table.galeria td:last-child {
-                border-bottom: none;
-            }
-        }
-        @media (max-width: 480px) {
-            table.galeria img {
-                max-width: 150px;
-            }
+            color: #0056b3;
+            margin: 0;
+            font-family: 'Georgia', serif;
         }
     </style>
 </head>
@@ -77,29 +50,29 @@
 
         <div class="middle-bar-terror">
             <div class="logo-terror">
-                <img src="img/logo.png" alt="Logo El Rincón del Terror">
+                <img src="img/logo.png" alt="Logo de la Tienda">
             </div>
             <div class="search-box-terror">
-                <input type="text" placeholder="Busca tu pesadilla..." class="search-input">
+                <input type="text" placeholder="Buscar productos..." class="search-input">
             </div>
             <div class="cart">
-                <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> (<span id="cart-item-count">0</span>)</a>
+                <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> Carrito (<span id="cart-item-count">0</span>)</a>
             </div>
         </div>
 
         <nav class="nav-bar-terror">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="populares.html">Populares Ahora</a></li>
-                <li><a href="clasicos.html">Clásicos del Terror</a></li>
+                <li><a href="populares.html">Populares</a></li>
+                <li><a href="clasicos.html">Clásicos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
         <div class="promo-banner-terror">
-            <i class="fa-solid fa-skull"></i>
-            <span>¡Nuevos horrores cada semana! No apto para cardíacos.</span>
-            <i class="fa-solid fa-skull"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>¡Ofertas especiales cada semana!</span>
+            <i class="fa-solid fa-star"></i>
         </div>
     </header>
 
@@ -107,54 +80,50 @@
         <section id="populares">
             <h2>Populares Ahora</h2>
             <article>
-                <h3>It (Eso)</h3>
-                <p>La adaptación de la novela de Stephen King que aterrorizó a una nueva generación.</p>
+                <h3>Producto Estrella 1</h3>
+                <p>Descripción del primer producto popular que está causando sensación entre nuestros clientes.</p>
             </article>
             <article>
-                <h3>El Conjuro</h3>
-                <p>Basada en los casos paranormales de Ed y Lorraine Warren, una película que te mantendrá al borde del asiento.</p>
+                <h3>Producto Estrella 2</h3>
+                <p>Descripción del segundo producto que todos están comprando. ¡No te quedes sin el tuyo!</p>
             </article>
 
-            <hr style="border-color: #E50914; margin: 30px auto; width: 50%;">
+            <hr style="border-color: #007BFF; margin: 30px auto; width: 50%;">
 
-            <h3>Galería del Horror Popular</h3>
-            <p>Algunas escenas y pósters de películas que están dando que hablar:</p>
+            <h3>Galería de Populares</h3>
+            <p>Una muestra visual de nuestros productos más vendidos:</p>
 
-            <table class="galeria">
-                <tr>
-                    <td>
-                        <img src="img/popular_it_poster.jpg" alt="Póster de It (Eso)">
-                        <p>It (2017)</p>
-                    </td>
-                    <td>
-                        <img src="img/popular_conjuro_escena.jpg" alt="Escena de El Conjuro">
-                        <p>El Conjuro (2013)</p>
-                    </td>
-                    <td>
-                        <img src="img/popular_hereditary_poster.jpg" alt="Póster de Hereditary">
-                        <p>Hereditary (2018)</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="img/popular_quiet_place_escena.jpg" alt="Escena de A Quiet Place">
-                        <p>A Quiet Place (2018)</p>
-                    </td>
-                    <td>
-                        <img src="img/popular_midsommar_poster.jpg" alt="Póster de Midsommar">
-                        <p>Midsommar (2019)</p>
-                    </td>
-                    <td>
-                        <img src="img/popular_getout_escena.jpg" alt="Escena de Get Out">
-                        <p>Get Out (2017)</p>
-                    </td>
-                </tr>
-            </table>
+            <div class="galeria">
+                <div class="galeria-item">
+                    <img src="img/popular_it_poster.jpg" alt="Producto 1">
+                    <p>Producto A (2017)</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/popular_conjuro_escena.jpg" alt="Producto 2">
+                    <p>Producto B (2013)</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/popular_hereditary_poster.jpg" alt="Producto 3">
+                    <p>Producto C (2018)</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/popular_quiet_place_escena.jpg" alt="Producto 4">
+                    <p>Producto D (2018)</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/popular_midsommar_poster.jpg" alt="Producto 5">
+                    <p>Producto E (2019)</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="img/popular_getout_escena.jpg" alt="Producto 6">
+                    <p>Producto F (2017)</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 El Rincón del Terror. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Mi Tienda Online. Todos los derechos reservados.</p>
     </footer>
 
 </body>

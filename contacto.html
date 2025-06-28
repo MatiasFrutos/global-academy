@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - El Rincón del Terror</title>
+    <title>Contacto - Tienda Online</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta8PUbAau2oNsWJYQBFUMjY1h/4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <style>
@@ -11,18 +11,17 @@
             max-width: 650px;
             margin: 20px auto;
             padding: 30px;
-            border: 2px dashed #E50914;
-            background-color: #111;
-            color: #ccc;
-            box-shadow: 0 0 25px rgba(229, 9, 20, 0.3);
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            color: #333;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
             border-radius: 10px;
         }
         form label {
             display: block;
             margin-bottom: 10px;
-            color: #E50914;
+            color: #007BFF;
             font-weight: bold;
-            font-size: 1.1em;
         }
         form input[type="text"],
         form input[type="email"],
@@ -31,9 +30,9 @@
             width: 100%;
             padding: 12px;
             margin-bottom: 20px;
-            border: 1px solid #E50914;
-            background-color: #222;
-            color: #ddd;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
             box-sizing: border-box;
             border-radius: 5px;
             font-size: 1em;
@@ -43,7 +42,7 @@
             min-height: 120px;
         }
         form button[type="submit"] {
-            background-color: #E50914;
+            background-color: #007BFF;
             color: white;
             padding: 15px 25px;
             border: none;
@@ -54,19 +53,8 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
         form button[type="submit"]:hover {
-            background-color: #b2070a;
+            background-color: #0056b3;
             transform: scale(1.02);
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        #contacto p {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #ccc;
-        }
-        #contacto h2 {
-            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -83,78 +71,78 @@
 
         <div class="middle-bar-terror">
             <div class="logo-terror">
-                <img src="img/logo.png" alt="Logo El Rincón del Terror">
+                <img src="img/logo.png" alt="Logo de la Tienda">
             </div>
             <div class="search-box-terror">
-                <input type="text" placeholder="Busca tu pesadilla..." class="search-input">
+                <input type="text" placeholder="Buscar productos..." class="search-input">
             </div>
             <div class="cart">
-                <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> (<span id="cart-item-count">0</span>)</a>
+                <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> Carrito (<span id="cart-item-count">0</span>)</a>
             </div>
         </div>
 
         <nav class="nav-bar-terror">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="populares.html">Populares Ahora</a></li>
-                <li><a href="clasicos.html">Clásicos del Terror</a></li>
+                <li><a href="populares.html">Populares</a></li>
+                <li><a href="clasicos.html">Clásicos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
         <div class="promo-banner-terror">
-            <i class="fa-solid fa-skull"></i>
-            <span>¡Nuevos horrores cada semana! No apto para cardíacos.</span>
-            <i class="fa-solid fa-skull"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>¡Ofertas especiales cada semana!</span>
+            <i class="fa-solid fa-star"></i>
         </div>
     </header>
 
     <main>
         <section id="contacto">
-            <h2>Contáctanos Desde el Más Allá... o Casi</h2>
-            <p>¿Has visto un fantasma en nuestro sitio? ¿O quizás tienes una sugerencia de película tan aterradora que nos hará dormir con la luz encendida? ¡Cuéntanos!</p>
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna duda o sugerencia? ¿Necesitas ayuda con tu pedido? ¡Escríbenos!</p>
 
             <form action="#" method="POST">
                 <div class="form-group">
-                    <label for="nombre">Tu Nombre (o Alias de Cazafantasmas):</label>
+                    <label for="nombre">Tu Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Tu Email (para recibir nuestras psicofonías):</label>
+                    <label for="email">Tu Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="asunto_terrorifico">Asunto de tu Invocación:</label>
-                    <select id="asunto_terrorifico" name="asunto_terrorifico">
-                        <option value="sugerencia_pelicula">Sugerencia de Película Aterradora</option>
-                        <option value="avistamiento_paranormal">Reportar Avistamiento en el Sitio</option>
-                        <option value="colaboracion_oscura">Propuesta de Colaboración Oscura</option>
-                        <option value="grito_ayuda">Un Grito de Ayuda (Consulta General)</option>
-                        <option value="otro_misterio">Otro Misterio sin Resolver</option>
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto">
+                        <option value="sugerencia">Sugerencia de Producto</option>
+                        <option value="problema_pedido">Problema con un Pedido</option>
+                        <option value="colaboracion">Propuesta de Colaboración</option>
+                        <option value="consulta">Consulta General</option>
+                        <option value="otro">Otro</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="mensaje_escalofriante">Tu Mensaje Escalofriante:</label>
-                    <textarea id="mensaje_escalofriante" name="mensaje_escalofriante" rows="6" required></textarea>
+                    <label for="mensaje">Tu Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
                 </div>
 
                 <div class="form-group">
                     <label>
-                        <input type="checkbox" name="acepto_sustos" value="si">
-                        Acepto recibir sustos ocasionales y novedades del Rincón del Terror (opcional).
+                        <input type="checkbox" name="acepto_novedades" value="si">
+                        Acepto recibir novedades y ofertas de la tienda (opcional).
                     </label>
                 </div>
 
-                <button type="submit">Enviar Mensaje al Inframundo</button>
+                <button type="submit">Enviar Mensaje</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 El Rincón del Terror. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Mi Tienda Online. Todos los derechos reservados.</p>
     </footer>
 
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Carrito - El Rincón del Terror</title>
+    <title>Mi Carrito - Tienda Online</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta8PUbAau2oNsWJYQBFUMjY1h/4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <style>
@@ -11,28 +11,19 @@
             max-width: 900px;
             margin: 50px auto;
             padding: 30px;
-            background-color: #222;
-            border: 2px solid #E50914;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 0 25px rgba(229, 9, 20, 0.4);
-        }
-        .cart-content-container h2 {
-            color: #E50914;
-            margin-bottom: 30px;
-            font-family: 'Creepster', cursive, sans-serif;
-            font-size: 2em;
-            text-align: center;
         }
         .cart-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #333;
-            border: 1px solid #444;
+            background-color: #fff;
+            border: 1px solid #eee;
             border-radius: 8px;
             padding: 15px;
             margin-bottom: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         .cart-item img {
             width: 80px;
@@ -40,40 +31,30 @@
             object-fit: cover;
             border-radius: 5px;
             margin-right: 20px;
-            border: 1px solid #E50914;
+            border: 1px solid #007BFF;
         }
         .cart-item-details {
             flex-grow: 1;
-            text-align: left;
         }
         .cart-item-details h3 {
-            color: #eee;
+            text-align: left;
             margin: 0 0 5px 0;
             font-size: 1.2em;
         }
         .cart-item-details p {
-            color: #aaa;
+            color: #666;
             margin: 0;
             font-size: 0.9em;
-        }
-        .cart-item-quantity,
-        .cart-item-price,
-        .cart-item-actions {
-            text-align: right;
-            margin-left: 20px;
-            color: #E50914;
-            font-weight: bold;
         }
         .cart-item-quantity input {
             width: 50px;
             padding: 5px;
-            background-color: #444;
-            border: 1px solid #E50914;
-            color: #eee;
+            text-align: center;
+            border: 1px solid #ccc;
             border-radius: 3px;
         }
         .remove-item-btn {
-            background-color: #880000;
+            background-color: #dc3545;
             color: white;
             border: none;
             padding: 8px 12px;
@@ -82,30 +63,23 @@
             transition: background-color 0.3s ease;
         }
         .remove-item-btn:hover {
-            background-color: #b20000;
+            background-color: #c82333;
         }
         .cart-summary {
-            background-color: #333;
-            border: 1px solid #E50914;
+            background-color: #fff;
+            border: 1px solid #ddd;
             border-radius: 8px;
             padding: 20px;
             margin-top: 30px;
             text-align: right;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-        .cart-summary p {
-            font-size: 1.2em;
-            color: #eee;
-            margin-bottom: 10px;
         }
         .cart-summary .total {
             font-size: 1.5em;
-            color: #E50914;
+            color: #0056b3;
             font-weight: bold;
-            margin-top: 15px;
         }
         .checkout-btn {
-            background-color: #E50914;
+            background-color: #28a745;
             color: white;
             padding: 15px 30px;
             border: none;
@@ -114,34 +88,10 @@
             font-size: 1.3em;
             font-weight: bold;
             margin-top: 20px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: background-color 0.3s ease;
         }
         .checkout-btn:hover {
-            background-color: #b2070a;
-            transform: scale(1.02);
-        }
-
-        @media (max-width: 600px) {
-            .cart-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .cart-item img {
-                margin-bottom: 15px;
-                margin-right: 0;
-            }
-            .cart-item-details {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-            .cart-item-quantity,
-            .cart-item-price,
-            .cart-item-actions {
-                width: 100%;
-                text-align: left;
-                margin-left: 0;
-                margin-top: 10px;
-            }
+            background-color: #218838;
         }
     </style>
 </head>
@@ -158,68 +108,68 @@
 
         <div class="middle-bar-terror">
             <div class="logo-terror">
-                <img src="img/logo.png" alt="Logo El Rincón del Terror">
+                <img src="img/logo.png" alt="Logo de la Tienda">
             </div>
             <div class="search-box-terror">
-                <input type="text" placeholder="Busca tu pesadilla..." class="search-input">
+                <input type="text" placeholder="Buscar productos..." class="search-input">
             </div>
             <div class="cart">
-                <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> (<span id="cart-item-count">0</span>)</a>
+                <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> Carrito (<span id="cart-item-count">0</span>)</a>
             </div>
         </div>
 
         <nav class="nav-bar-terror">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="populares.html">Populares Ahora</a></li>
-                <li><a href="clasicos.html">Clásicos del Terror</a></li>
+                <li><a href="populares.html">Populares</a></li>
+                <li><a href="clasicos.html">Clásicos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
         <div class="promo-banner-terror">
-            <i class="fa-solid fa-skull"></i>
-            <span>¡Nuevos horrores cada semana! No apto para cardíacos.</span>
-            <i class="fa-solid fa-skull"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>¡Ofertas especiales cada semana!</span>
+            <i class="fa-solid fa-star"></i>
         </div>
     </header>
 
     <main>
         <div class="cart-content-container">
-            <h2>Tu Carrito de los Horrores</h2>
+            <h2>Tu Carrito de Compras</h2>
 
             <div class="cart-items" id="cart-items-container">
                 <div class="cart-item" data-id="1" data-price="19.99">
-                    <img src="img/El Conjuro (DVD Edición Coleccionista).png" alt="Portada de la película">
+                    <img src="img/El Conjuro (DVD Edición Coleccionista).png" alt="Producto 1">
                     <div class="cart-item-details">
-                        <h3>El Conjuro (DVD Edición Coleccionista)</h3>
-                        <p>Terror / Misterio</p>
+                        <h3>Producto A (Edición Coleccionista)</h3>
+                        <p>Categoría / Subcategoría</p>
                     </div>
                     <div class="cart-item-quantity">
-                        Cantidad: <input type="number" value="1" min="1" onchange="updateCartItem(this)">
+                        <input type="number" value="1" min="1" onchange="updateCart()">
                     </div>
                     <div class="cart-item-price">
                         $<span class="item-total">19.99</span>
                     </div>
                     <div class="cart-item-actions">
-                        <button class="remove-item-btn" onclick="removeItem(this)">Eliminar</button>
+                        <button class="remove-item-btn" onclick="this.closest('.cart-item').remove(); updateCart();">Eliminar</button>
                     </div>
                 </div>
 
                 <div class="cart-item" data-id="2" data-price="12.25">
-                    <img src="img/Cómics The Walking Dead Vol. 1.png" alt="Portada del cómic">
+                    <img src="img/Cómics The Walking Dead Vol. 1.png" alt="Producto 2">
                     <div class="cart-item-details">
-                        <h3>Cómics: The Walking Dead Vol. 1</h3>
-                        <p>Cómics / Zombis</p>
+                        <h3>Producto B Vol. 1</h3>
+                        <p>Categoría / Libros</p>
                     </div>
                     <div class="cart-item-quantity">
-                        Cantidad: <input type="number" value="2" min="1" onchange="updateCartItem(this)">
+                        <input type="number" value="2" min="1" onchange="updateCart()">
                     </div>
                     <div class="cart-item-price">
                         $<span class="item-total">24.50</span>
                     </div>
                     <div class="cart-item-actions">
-                        <button class="remove-item-btn" onclick="removeItem(this)">Eliminar</button>
+                        <button class="remove-item-btn" onclick="this.closest('.cart-item').remove(); updateCart();">Eliminar</button>
                     </div>
                 </div>
             </div>
@@ -228,36 +178,32 @@
                 <p>Subtotal: $<span id="cart-subtotal">44.49</span></p>
                 <p>Envío: $<span id="cart-shipping">5.00</span></p>
                 <p class="total">Total: $<span id="cart-total">49.49</span></p>
-                <button class="checkout-btn">Proceder al Ritual de Pago</button>
+                <button class="checkout-btn">Proceder al Pago</button>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 El Rincón del Terror. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Mi Tienda Online. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            updateCartSummary();
-        });
-
-        function updateCartSummary() {
+        function updateCart() {
             const cartItems = document.querySelectorAll('.cart-item');
             let subtotal = 0;
-            let itemCount = 0;
+            let totalItems = 0;
             const shippingCost = 5.00;
 
             cartItems.forEach(item => {
                 const price = parseFloat(item.dataset.price);
                 const quantity = parseInt(item.querySelector('input[type="number"]').value);
-                const itemTotalElement = item.querySelector('.item-total');
-
+                const itemTotalEl = item.querySelector('.item-total');
+                
                 const currentItemTotal = price * quantity;
-                itemTotalElement.textContent = currentItemTotal.toFixed(2);
-
+                itemTotalEl.textContent = currentItemTotal.toFixed(2);
+                
                 subtotal += currentItemTotal;
-                itemCount += quantity;
+                totalItems += quantity;
             });
 
             const total = subtotal + shippingCost;
@@ -265,18 +211,12 @@
             document.getElementById('cart-subtotal').textContent = subtotal.toFixed(2);
             document.getElementById('cart-shipping').textContent = shippingCost.toFixed(2);
             document.getElementById('cart-total').textContent = total.toFixed(2);
-            document.getElementById('cart-item-count').textContent = itemCount;
+
+            const headerCartCount = document.querySelectorAll('#cart-item-count');
+            headerCartCount.forEach(el => el.textContent = totalItems);
         }
 
-        function removeItem(button) {
-            const cartItem = button.closest('.cart-item');
-            cartItem.remove();
-            updateCartSummary();
-        }
-
-        function updateCartItem(input) {
-            updateCartSummary();
-        }
+        document.addEventListener('DOMContentLoaded', updateCart);
     </script>
 
 </body>

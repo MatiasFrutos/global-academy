@@ -1,30 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-
 body {
     margin: 0;
-    font-family: 'Creepster', cursive, sans-serif;
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
     line-height: 1.6;
 }
 
 .main-header {
     width: 100%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    background-color: #000;
-    border-bottom: 2px solid #E50914;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #007BFF;
 }
 
 .top-bar-terror {
-    background-color: #333;
-    color: #ddd;
+    background-color: #e9e9e9;
+    color: #555;
     padding: 8px 0;
     font-size: 0.9em;
     min-height: 35px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #ddd;
 }
 
 .top-bar-terror .contact-social {
@@ -34,7 +32,7 @@ body {
 }
 
 .top-bar-terror .contact-social a {
-    color: #e0e0e0;
+    color: #555;
     text-decoration: none;
     transition: color 0.3s ease;
     display: flex;
@@ -42,7 +40,7 @@ body {
 }
 
 .top-bar-terror .contact-social a:hover {
-    color: #E50914;
+    color: #007BFF;
 }
 
 .top-bar-terror .contact-social i {
@@ -51,9 +49,10 @@ body {
 }
 
 .middle-bar-terror {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
+    gap: 20px;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -61,18 +60,17 @@ body {
 
 .middle-bar-terror .search-box-terror {
     position: relative;
-    flex-grow: 1;
-    max-width: 350px;
-    margin-left: 30px;
+    width: 100%;
+    max-width: 450px;
+    justify-self: center;
 }
 
 .middle-bar-terror .search-box-terror .search-input {
     width: 100%;
     padding: 10px 15px;
-    padding-right: 40px;
-    border: 1px solid #E50914;
-    background-color: #333;
-    color: #ddd;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
     border-radius: 5px;
     font-size: 1em;
     box-sizing: border-box;
@@ -81,63 +79,42 @@ body {
 }
 
 .middle-bar-terror .search-box-terror .search-input::placeholder {
-    color: #aaa;
+    color: #999;
 }
 
 .middle-bar-terror .search-box-terror .search-input:focus {
-    border-color: #ff3333;
-    box-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
-}
-
-.middle-bar-terror .search-box-terror .search-input {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23E50914" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: calc(100% - 10px) center;
-    background-size: 24px 24px;
-}
-
-.middle-bar-terror .logo-terror {
-    display: flex;
-    align-items: center;
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
 }
 
 .middle-bar-terror .logo-terror img {
-    max-height: 80px;
+    max-height: 60px;
     width: auto;
 }
 
-.middle-bar-terror .cart {
+.middle-bar-terror .cart a {
     font-size: 1.1em;
-    display: flex;
-    align-items: center;
-    border: 1px solid #E50914;
+    text-decoration: none;
+    color: #007BFF;
+    border: 1px solid #007BFF;
     border-radius: 20px;
     padding: 8px 15px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    margin-left: 30px;
-}
-
-.middle-bar-terror .cart a {
-    text-decoration: none;
-    color: #E50914;
-    display: flex;
-    align-items: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .middle-bar-terror .cart a:hover {
-    color: #b2070a;
+    background-color: #007BFF;
+    color: #fff;
 }
 
 .middle-bar-terror .cart i {
-    color: #E50914;
     margin-right: 8px;
 }
 
 .nav-bar-terror {
-    background-color: #222;
-    border-top: 1px solid #444;
-    border-bottom: 1px solid #444;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     padding: 15px 0;
 }
 
@@ -147,132 +124,99 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 40px;
 }
 
 .nav-bar-terror li a {
     text-decoration: none;
-    color: #ccc;
+    color: #333;
     font-weight: bold;
     font-size: 1.1em;
     padding: 5px 0;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-    white-space: nowrap;
+    transition: color 0.3s ease;
     text-transform: uppercase;
 }
 
 .nav-bar-terror li a:hover {
-    color: #E50914;
-    text-shadow: 0 0 10px rgba(229, 9, 20, 0.7);
+    color: #007BFF;
 }
 
 .promo-banner-terror {
-    background-color: #5a0000;
-    color: #f0f0f0;
-    padding: 12px 0;
-    font-weight: bold;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 20px;
     font-size: 1.05em;
-    min-height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    text-align: center;
 }
 
 .promo-banner-terror i {
-    color: #f0f0f0;
     font-size: 1.3em;
-    animation: pulse-skull 1.5s infinite alternate;
-}
-
-@keyframes pulse-skull {
-    from { transform: scale(1); opacity: 0.8; }
-    to { transform: scale(1.05); opacity: 1; }
 }
 
 main {
     padding: 40px 20px;
     max-width: 900px;
     margin: 20px auto;
-    background-color: #222;
-    border: 1px solid #444;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
 }
 
-main h2, main h3 {
-    color: #E50914;
+h1, h2, h3, h4, h5, h6 {
+    color: #0056b3;
     text-align: center;
+    margin-top: 10px;
     margin-bottom: 25px;
-    font-family: 'Creepster', cursive, sans-serif;
+    font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 main p {
     margin-bottom: 15px;
-    color: #ccc;
+    color: #444;
 }
 
 footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    background-color: #000;
-    color: #777;
-    border-top: 1px solid #444;
+    background-color: #333;
+    color: #ccc;
     font-size: 0.9em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 580px) {
     .middle-bar-terror {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 15px;
         padding: 15px;
     }
-    .middle-bar-terror .logo-terror img {
-        max-height: 60px;
+    
+    .middle-bar-terror .logo-terror {
+        grid-row: 1;
     }
+
     .middle-bar-terror .search-box-terror {
+        grid-row: 2;
         max-width: 90%;
-        margin-top: 15px;
-        margin-left: 0;
     }
+    
     .middle-bar-terror .cart {
-        margin-top: 15px;
-        margin-left: 0;
+        grid-row: 3;
     }
+
     .nav-bar-terror ul {
         flex-direction: column;
         align-items: center;
         gap: 15px;
     }
-    .promo-banner-terror {
-        font-size: 0.9em;
-        gap: 10px;
-    }
-    .promo-banner-terror i {
-        font-size: 1.1em;
-    }
-}
 
-@media (max-width: 480px) {
-    .top-bar-terror .contact-social {
-        flex-direction: column;
-        align-items: flex-end;
-        padding-right: 10px;
-        gap: 8px;
-        font-size: 0.8em;
-    }
-    .middle-bar-terror .logo-terror img {
-        max-height: 50px;
-    }
-    .search-box-terror input {
-        font-size: 0.9em;
-    }
-    .nav-bar-terror li a {
-        font-size: 1em;
+    .top-bar-terror {
+        justify-content: center;
     }
 }

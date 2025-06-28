@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cuenta - El Rincón del Terror</title>
+    <title>Crear Cuenta - Tienda Online</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta8PUbAau2oNsWJYQBFUMjY1h/4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <style>
@@ -11,17 +11,15 @@
             max-width: 500px;
             margin: 50px auto;
             padding: 30px;
-            background-color: #222;
-            border: 2px solid #E50914;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 0 25px rgba(229, 9, 20, 0.4);
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
             text-align: center;
         }
         .registro-container h2 {
-            color: #E50914;
+            color: #0056b3;
             margin-bottom: 30px;
-            font-family: 'Creepster', cursive, sans-serif;
-            font-size: 2em;
         }
         .registro-container .form-group {
             margin-bottom: 20px;
@@ -30,22 +28,23 @@
         .registro-container label {
             display: block;
             margin-bottom: 8px;
-            color: #ccc;
+            color: #333;
             font-weight: bold;
         }
         .registro-container input[type="text"],
         .registro-container input[type="email"],
         .registro-container input[type="password"] {
-            width: calc(100% - 20px);
+            width: 100%;
             padding: 10px;
-            border: 1px solid #444;
-            background-color: #333;
-            color: #eee;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
             border-radius: 5px;
             font-size: 1em;
         }
         .registro-container button {
-            background-color: #E50914;
+            background-color: #007BFF;
             color: white;
             padding: 12px 25px;
             border: none;
@@ -56,15 +55,15 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .registro-container button:hover {
-            background-color: #b2070a;
+            background-color: #0056b3;
             transform: scale(1.02);
         }
         .registro-container p {
             margin-top: 20px;
-            color: #aaa;
+            color: #555;
         }
         .registro-container p a {
-            color: #E50914;
+            color: #007BFF;
             text-decoration: none;
             font-weight: bold;
         }
@@ -86,35 +85,35 @@
 
         <div class="middle-bar-terror">
             <div class="logo-terror">
-                <img src="img/logo.png" alt="Logo El Rincón del Terror">
+                <img src="img/logo.png" alt="Logo de la Tienda">
             </div>
             <div class="search-box-terror">
-                <input type="text" placeholder="Busca tu pesadilla..." class="search-input">
+                <input type="text" placeholder="Buscar productos..." class="search-input">
             </div>
             <div class="cart">
-                <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> (<span id="cart-item-count">0</span>)</a>
+                <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> Carrito (<span id="cart-item-count">0</span>)</a>
             </div>
         </div>
 
         <nav class="nav-bar-terror">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="populares.html">Populares Ahora</a></li>
-                <li><a href="clasicos.html">Clásicos del Terror</a></li>
+                <li><a href="populares.html">Populares</a></li>
+                <li><a href="clasicos.html">Clásicos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
         <div class="promo-banner-terror">
-            <i class="fa-solid fa-skull"></i>
-            <span>¡Nuevos horrores cada semana! No apto para cardíacos.</span>
-            <i class="fa-solid fa-skull"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>¡Ofertas especiales cada semana!</span>
+            <i class="fa-solid fa-star"></i>
         </div>
     </header>
 
     <main>
         <div class="registro-container">
-            <h2>Crea tu Cuenta para Entrar al Rincón</h2>
+            <h2>Crea tu Cuenta</h2>
             <form action="#" method="POST">
                 <div class="form-group">
                     <label for="new-username">Nombre de Usuario:</label>
@@ -132,14 +131,14 @@
                     <label for="confirm-password">Confirmar Contraseña:</label>
                     <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
-                <button type="submit">Inscribirse al Mal</button>
+                <button type="submit">Registrarse</button>
             </form>
-            <p>¿Ya eres parte de la oscuridad? <a href="login.html">Inicia sesión aquí</a></p>
+            <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 El Rincón del Terror. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Mi Tienda Online. Todos los derechos reservados.</p>
     </footer>
 
 </body>
